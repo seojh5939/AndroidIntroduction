@@ -11,6 +11,8 @@
         android:id="@+id/iv_humanIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:src="@drawable/img_sign_up"
+        app:layout_constraintBottom_toTopOf="@+id/et_id"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,6 +22,7 @@
         style="@style/ComponentMargin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:text="@string/tv_name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_humanIcon" />
@@ -50,38 +53,40 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/tv_id_hint"
-        app:layout_constraintTop_toBottomOf="@+id/tv_id"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_id" />
 
     <TextView
         android:id="@+id/tv_pw"
         style="@style/ComponentMargin"
-        app:layout_constraintTop_toBottomOf="@+id/et_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tv_pw"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_id" />
 
     <EditText
         android:id="@+id/et_pw"
         style="@style/ComponentMargin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tv_pw"
         android:hint="@string/tv_pw_hint"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pw" />
 
     <Button
-        android:layout_marginTop="40dp"
         android:id="@+id/btn_join"
         style="@style/ComponentMargin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:onClick="onClickedButtonSignUp"
         android:text="@string/btn_join"
-        app:layout_constraintTop_toBottomOf="@+id/et_pw"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_pw" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,16 +23,16 @@ class SignInActivity : AppCompatActivity() {
         when (view.id) {
             R.id.btn_login -> {
                 if (inputIsEmpty()) {
-                    showToastMsg(this, getString(R.string.toast_et_Empty))
+                    showToastMsg(this, getString(R.string.toast_sign_in_fail))
                 }
 
                 if (!inputIsEmpty()) {
                     val userId = idEditText.text.toString()
                     val intent = Intent(this, HomeActivity::class.java)
-                    intent.putExtra("idDatFromSignInActivity", userId)
+                    intent.putExtra(getString(R.string.intent_extra_id), userId)
                     startActivity(intent)
 
-                    showToastMsg(this, getString(R.string.toast_login_success))
+                    showToastMsg(this, getString(R.string.toast_sign_in_success))
                 }
             }
 
