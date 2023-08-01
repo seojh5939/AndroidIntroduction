@@ -4,6 +4,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".SignUpActivity">
+
+    <ImageView
+        android:id="@+id/iv_humanIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/ComponentMargin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_humanIcon" />
+
+    <EditText
+        android:id="@+id/et_name"
+        style="@style/ComponentMargin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/tv_name_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+    <TextView
+        android:id="@+id/tv_id"
+        style="@style/ComponentMargin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+
+    <EditText
+        android:id="@+id/et_id"
+        style="@style/ComponentMargin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/tv_id_hint"
+        app:layout_constraintTop_toBottomOf="@+id/tv_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_pw"
+        style="@style/ComponentMargin"
+        app:layout_constraintTop_toBottomOf="@+id/et_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_pw"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/et_pw"
+        style="@style/ComponentMargin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pw"
+        android:hint="@string/tv_pw_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:layout_marginTop="40dp"
+        android:id="@+id/btn_join"
+        style="@style/ComponentMargin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_join"
+        app:layout_constraintTop_toBottomOf="@+id/et_pw"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
