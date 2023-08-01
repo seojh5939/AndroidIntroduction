@@ -6,4 +6,9 @@
     </style>
 
     <style name="Theme.AndroidIntroductionProject" parent="Base.Theme.AndroidIntroductionProject" />
+
+    <style name="ComponentMargin">
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+    </style>
 </resources>
