@@ -14,6 +14,7 @@
     <string name="toast_sign_up_fail">입력되지 않은 정보가 있습니다.</string>
 
     <string name="intent_extra_id">idFromSignInActivity</string>
+    <string name="intent_extra_pw">pwFromSignInActivity</string>
     <string name="tv_age">나이</string>
     <string name="tv_mbti">MBTI</string>
     <string name="btn_exit">종료</string>

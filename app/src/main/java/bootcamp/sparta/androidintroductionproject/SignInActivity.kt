@@ -1,23 +1,27 @@
 package bootcamp.sparta.androidintroductionproject
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 
 class SignInActivity : AppCompatActivity() {
-    lateinit var idEditText: EditText
-    lateinit var pwEditText: EditText
+    private lateinit var resultLauncher : ActivityResultLauncher<Intent>
+   private lateinit var et_id_signIn: EditText
+   private lateinit var et_pw_signIn: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
-        idEditText = findViewById<EditText>(R.id.et_id_signIn)
-        pwEditText = findViewById<EditText>(R.id.et_pw_signIn)
+        et_id_signIn = findViewById<EditText>(R.id.et_id_signIn)
+        et_pw_signIn = findViewById<EditText>(R.id.et_pw_signIn)
+        resultSignUp()
     }
 
     fun onClickedButton(view: View) {
@@ -28,25 +32,36 @@ class SignInActivity : AppCompatActivity() {
                 }
 
                 if (!inputIsEmpty()) {
-                    val userId = idEditText.text.toString()
-                    val intent = Intent(this, HomeActivity::class.java)
-                    intent.putExtra(getString(R.string.intent_extra_id), userId)
-                    startActivity(intent)
+                    val userId = et_id_signIn.text.toString()
+                    val intent_home = Intent(this, HomeActivity::class.java)
+                    intent_home.putExtra(getString(R.string.intent_extra_id), userId)
+                    startActivity(intent_home)
 
                     showToastMsg(this, getString(R.string.toast_sign_in_success))
                 }
             }
 
             R.id.btn_join_signIn -> {
-                val intent = Intent(this, SignUpActivity::class.java)
-                startActivity(intent)
+                val intent_join = Intent(this, SignUpActivity::class.java)
+                resultLauncher.launch(intent_join)
             }
         }
     }
 
-    // editText의 값이 비어있는지 체크
-    fun inputIsEmpty(): Boolean = idEditText.text.isEmpty() || pwEditText.text.isEmpty()
-    fun showToastMsg(context: Context, msg: String) =
-        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
+    private fun resultSignUp() {
+        resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if(result.resultCode == Activity.RESULT_OK) {
+                val id = result.data?.getStringExtra(getString(R.string.intent_extra_id) ?: "")
+                val pw = result.data?.getStringExtra(getString(R.string.intent_extra_pw) ?: "")
+                et_id_signIn.setText(id)
+                et_pw_signIn.setText(pw)
+            }
+        }
 
+    }
+
+    // editText의 값이 비어있는지 체크
+   private fun inputIsEmpty(): Boolean = et_id_signIn.text.isEmpty() || et_pw_signIn.text.isEmpty()
+   private fun showToastMsg(context: Context, msg: String) =
+        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
 }
