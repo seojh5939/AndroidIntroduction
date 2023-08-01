@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
@@ -15,13 +16,13 @@ class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
-        idEditText = findViewById<EditText>(R.id.et_id)
-        pwEditText = findViewById<EditText>(R.id.et_pw)
+        idEditText = findViewById<EditText>(R.id.et_id_signIn)
+        pwEditText = findViewById<EditText>(R.id.et_pw_signIn)
     }
 
     fun onClickedButton(view: View) {
         when (view.id) {
-            R.id.btn_login -> {
+            R.id.btn_login_signIn -> {
                 if (inputIsEmpty()) {
                     showToastMsg(this, getString(R.string.toast_sign_in_fail))
                 }
@@ -36,7 +37,7 @@ class SignInActivity : AppCompatActivity() {
                 }
             }
 
-            R.id.btn_join -> {
+            R.id.btn_join_signIn -> {
                 val intent = Intent(this, SignUpActivity::class.java)
                 startActivity(intent)
             }

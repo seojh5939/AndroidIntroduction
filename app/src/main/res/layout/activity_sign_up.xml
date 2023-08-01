@@ -8,66 +8,66 @@
     tools:context=".SignUpActivity">
 
     <ImageView
-        android:id="@+id/iv_humanIcon"
+        android:id="@+id/iv_humanIcon_signUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/img_sign_up"
-        app:layout_constraintBottom_toTopOf="@+id/et_id"
+        app:layout_constraintBottom_toTopOf="@+id/et_id_signUp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_name"
+        android:id="@+id/tv_name_signUp"
         style="@style/ComponentMargin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="@string/tv_name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_humanIcon" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_humanIcon_signUp" />
 
     <EditText
-        android:id="@+id/et_name"
+        android:id="@+id/et_name_signUp"
         style="@style/ComponentMargin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/tv_name_hint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_signUp" />
 
     <TextView
-        android:id="@+id/tv_id"
+        android:id="@+id/tv_id_signUp"
         style="@style/ComponentMargin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tv_id"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_name" />
+        app:layout_constraintTop_toBottomOf="@+id/et_name_signUp" />
 
 
     <EditText
-        android:id="@+id/et_id"
+        android:id="@+id/et_id_signUp"
         style="@style/ComponentMargin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/tv_id_hint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_id" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_id_signUp" />
 
     <TextView
-        android:id="@+id/tv_pw"
+        android:id="@+id/tv_pw_signUp"
         style="@style/ComponentMargin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tv_pw"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_id" />
+        app:layout_constraintTop_toBottomOf="@+id/et_id_signUp" />
 
     <EditText
-        android:id="@+id/et_pw"
+        android:id="@+id/et_pw_signUp"
         style="@style/ComponentMargin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -75,10 +75,10 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_pw" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_pw_signUp" />
 
     <Button
-        android:id="@+id/btn_join"
+        android:id="@+id/btn_join_signUp"
         style="@style/ComponentMargin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -87,6 +87,6 @@
         android:text="@string/btn_join"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_pw" />
+        app:layout_constraintTop_toBottomOf="@+id/et_pw_signUp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

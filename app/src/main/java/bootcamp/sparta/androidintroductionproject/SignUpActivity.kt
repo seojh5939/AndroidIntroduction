@@ -22,10 +22,10 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     fun init() {
-        et_name = findViewById(R.id.et_name)
-        et_id = findViewById(R.id.et_id)
-        et_pw = findViewById(R.id.et_pw)
-        bt_join = findViewById(R.id.btn_join)
+        et_name = findViewById(R.id.et_name_signUp)
+        et_id = findViewById(R.id.et_id_signUp)
+        et_pw = findViewById(R.id.et_pw_signUp)
+        bt_join = findViewById(R.id.btn_join_signUp)
     }
 
     fun onClickedButtonSignUp(view: View) {

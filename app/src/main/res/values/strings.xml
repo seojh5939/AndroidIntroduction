@@ -16,4 +16,5 @@
     <string name="intent_extra_id">idFromSignInActivity</string>
     <string name="tv_age">나이</string>
     <string name="tv_mbti">MBTI</string>
+    <string name="btn_exit">종료</string>
 </resources>
