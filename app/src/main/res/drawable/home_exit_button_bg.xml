@@ -2,18 +2,15 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- normal -->
     <item android:state_pressed="false">
+
         <layer-list>
             <item>
-                <shape android:innerRadius="10dp" android:shape="rectangle">
+                <shape android:shape="rectangle">
+                    <corners android:radius="10dp" />
                     <solid android:color="@color/yellow" />
                 </shape>
             </item>
-            <item android:drawable="@drawable/icon_not_pressed"
-                android:width="40dp"
-                android:height="40dp"
-                android:gravity="center_vertical"
-                android:left="100dp">
-            </item>
+            <item android:width="40dp" android:height="40dp" android:drawable="@drawable/icon_not_pressed" android:gravity="center_vertical" android:left="100dp" />
         </layer-list>
     </item>
 
@@ -22,15 +19,11 @@
         <layer-list>
             <item>
                 <shape android:innerRadius="10dp" android:shape="rectangle">
+                    <corners android:radius="10dp" />
                     <solid android:color="@color/orange" />
                 </shape>
             </item>
-            <item android:drawable="@drawable/icon_pressed"
-                android:width="40dp"
-                android:height="40dp"
-                android:gravity="center_vertical"
-                android:left="100dp">
-            </item>
+            <item android:width="40dp" android:height="40dp" android:drawable="@drawable/icon_pressed" android:gravity="center_vertical" android:left="100dp"></item>
         </layer-list>
     </item>
 
