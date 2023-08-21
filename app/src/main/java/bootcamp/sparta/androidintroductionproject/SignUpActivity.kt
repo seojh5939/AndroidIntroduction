@@ -31,7 +31,7 @@ class SignUpActivity : AppCompatActivity() {
         bt_join = findViewById(R.id.btn_join_signUp)
     }
 
-    fun onClickedButtonSignUp(view: View) {
+    fun onClickedButtonSignUp() {
         if (inputIsEmpty()) {
             showToastMsg(this, getString(R.string.toast_sign_up_fail))
         }
